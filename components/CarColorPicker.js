@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Swatches from './Swatches'; //. means stay the same directory
 
-const CarColorPicker = ({ colors }) => {
+const CarColorPicker = ({ colors,clickHandler }) => {
     const [activeColor, setActiveColor] = useState(colors[0]);
     return <div>
         <h2>Color picker</h2>
@@ -10,12 +10,16 @@ const CarColorPicker = ({ colors }) => {
             <Image 
                 src={`/vehicles/crosstrek/colors/crosstrek-${activeColor.slug}.webp`}
                 alt={`Crosstrek ${activeColor.name}`}
-                width={300}
-                height={200}
+                width={575}
+                height={300}
             />
         </div>
-        <Swatches colors={colors} />
-        <h3>Color name</h3>
+        <Swatches 
+            colors={colors}
+            clickHandler={setActiveColor}
+            activeColor={activeColor}
+        />
+        <h3>{activeColor.name}</h3>
     </div>
 }
 export default CarColorPicker;

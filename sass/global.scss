@@ -1,0 +1,20 @@
+@use './vendor/normalize';
+@use './abstracts/vars';
+
+// typographic reset
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+ul, li {
+    list-style: none; // remove bullets
+}
+img {
+    vertical-align: top; // removes white space below images
+}
+
+body {
+    background-color: vars.$color_orange;
+}
+

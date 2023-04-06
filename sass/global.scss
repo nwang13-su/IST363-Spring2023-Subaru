@@ -13,8 +13,11 @@ ul, li {
 img {
     vertical-align: top; // removes white space below images
 }
+* {
+    box-sizing: border-box; // invert padding
+}
 
 body {
-    background-color: vars.$color_orange;
+    background-color: white;
 }
 

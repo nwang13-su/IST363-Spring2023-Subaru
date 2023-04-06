@@ -26,7 +26,7 @@ export async function getStaticProps() {
   }
 }
 const Homepage = ({data, colors}) => {
-  console.log({data});
+  //console.log({data});
   return <Layout>
     <Showcase />
     <LocationPicker />

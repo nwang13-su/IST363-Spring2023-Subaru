@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Button from '../components/Button';
-import CarColorPicker from '../components/CarColorPicker';
+//import CarColorPicker from '../components/OLDCarColorPicker';
 import Header from '../components/Header';
 import Image from 'next/image';
 import Layout from '../components/Layout';

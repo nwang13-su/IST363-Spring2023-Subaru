@@ -50,3 +50,33 @@
 	// error warn if string does not match or it is not a length
 	
 }
+
+$sizes: 40px, 50px, 80px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+@mixin textAligns() {
+	$textAligns: left, center, right, justify;
+
+	@each $textAlign in $textAligns {
+		& .text-align-#{$textAlign} {
+			text-align: $textAlign;
+		}
+	}
+}
+@mixin colors() {
+	$colors: black, white;
+
+	@each $color in $colors {
+		&.color-#{$color}{
+			color: $color;
+		}
+	}
+}
+

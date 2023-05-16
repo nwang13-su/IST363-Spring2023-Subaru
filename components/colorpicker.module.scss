@@ -1,0 +1,52 @@
+@use '../sass/abstracts/vars';
+@use '../sass/abstracts/mixins';
+
+
+.colorpicker {
+    //background-color: lightblue;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    .large_image_relative_parent {
+        position: relative;
+        //background-color: pink;
+        height: 0;
+        margin-bottom: calc((607 / 1150) * 100%);
+        @include mixins.breakpoint(laptop){
+            
+            padding-bottom: calc((52% * 700) / 100%);
+        }
+    }
+    .large_image_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        //background-color: rebeccapurple;
+        width: 100%;
+    }
+    .large_image {
+        width: 100%;
+        height: auto;
+        @include mixins.breakpoint(laptop){
+            width: 700px;
+        }
+    }
+}
+
+.swatches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.swatch {
+    width: 3rem;
+    height: 3rem;
+    //background-color: yellow;
+    transition: all .5s;
+    &.active {
+        border: 2px solid vars.$color_blue;
+    }
+}

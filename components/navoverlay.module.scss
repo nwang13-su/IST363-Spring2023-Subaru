@@ -1,0 +1,35 @@
+@use '../sass/abstracts/vars';
+
+.navoverlay {
+    background-color: vars.$color_blue;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* index is making sure it's on the top of everthing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navmobile {
+    &_list{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        li {
+            font-family: arial;
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+            a {
+                color: black;
+                text-decoration: none;
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

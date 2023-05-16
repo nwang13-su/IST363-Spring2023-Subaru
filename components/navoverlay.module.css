@@ -1,9 +1,0 @@
-.navoverlay {
-    background-color: green;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* index is making sure it's on the top of everthing */
-}

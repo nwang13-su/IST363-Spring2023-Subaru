@@ -1,0 +1,23 @@
+@use '../sass/abstracts/mixins';
+
+.grid {
+    //background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    .gridItem {
+        width: 100%;
+        @include mixins.breakpoint(tablet){
+            width: 50%;
+        }
+        @include mixins.breakpoint(tablet){
+            width: calc(100%/3);
+        }
+        .gridItemImage {
+            //background-color: pink;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
